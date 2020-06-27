@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <?php
-
-	require("core/conn.php");
-	$upit = "SELECT * FROM korisnik";
-	$rez = $conn->query($upit);
-	$korisnici = $rez->fetch_assoc();
-	    
-		
+    session_start();
+	
+	
 	
 ?>
+
 <html lang="en">
 <head>
 	<title>FitMe</title>
@@ -35,23 +32,24 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
+<body>
 
-	<div class="limiter">
+<class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="POST" action="<?php $_SERVER['PHP_SELF']?>">
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="POST" action="skripta_login.php" name="login_form">
 					<span class="login100-form-title">
 						Prijavite se
 						
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Molim Vas unesite korisnicko ime">
-						<input class="input100" type="text" name="username" id="username" placeholder="Korisnicko ime">
+						<input class="input100"  name="username"  placeholder="Korisnicko ime" value="<?php echo $_SESSION['user']??"" ?>">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Molim Vas unesite password">
-						<input class="input100" type="password" name="pass" id="password" placeholder="Password">
+						<input class="input100" type="password" name="password"  placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -68,10 +66,19 @@
 						</a>
 					</div>
 					<div class="container-login100-form-btn">
-						<input class="login100-form-btn" type="submit" id="login" value="P R I J A V A ">
+						<input class="login100-form-btn" type="submit" name="login" value="P R I J A V A ">
 						</input>
 					</div>
-             
+					</br>
+					</br>
+                     <?php
+if(!empty($_SESSION['poruka']))  {
+	echo "<div class='txt3'>";
+echo "<span color='red'>".$_SESSION['poruka']."</span>"; 
+echo "</div>"; 
+
+}
+ ?>
 					
 						
                      <div class="flex-col-c p-t-170 p-b-40">
@@ -86,8 +93,11 @@
 			</div>
 		</div>
 	</div>
-	
+		
 	 
 
 </body>
 </html>
+<?php 
+ session_destroy();
+?>

@@ -1,4 +1,11 @@
 <!DOCTYPE php>
+
+<?php
+    session_start();
+    
+    
+
+?>
 <php lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -118,9 +125,7 @@
 						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
 						<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
 					</div>
-					<div class="colophon">
-						<p>Copyright 2014 Company name. Designed by Themezy. All right reserved</p>
-					</div>
+					
 				</div>
 			</footer>
 
