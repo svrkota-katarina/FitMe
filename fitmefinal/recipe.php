@@ -26,7 +26,7 @@
 		<div id="site-content">
 			<header class="site-header">
 				<div class="container">
-					<a href="index.php" id="branding" class="pull-left">
+					<a href="pocetna.php" id="branding" class="pull-left">
 						<i class="icon-cupcake logo"></i>
 						<h1 class="site-title">Name Surname</h1>
 					</a>

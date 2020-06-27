@@ -1,137 +1,105 @@
-<!DOCTYPE php>
-<php lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+<!DOCTYPE html>
+<?php
+
+	require("core/conn.php");
+	$upit = "SELECT * FROM korisnik";
+	$rez = $conn->query($upit);
+	$korisnici = $rez->fetch_assoc();
+	    
 		
-		<title>Diatecian</title>
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="fonts/iconmoon.css" rel="stylesheet" type="text/css">
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		
-		<!--[if lt IE 9]>
-		<script src="js/ie-support/php5.js"></script>
-		<script src="js/ie-support/respond.js"></script>
-		<![endif]-->
+	
+?>
+<html lang="en">
+<head>
+	<title>FitMe</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	 <?php							if(isset($_POST["login"]))
+	{	
+           $korisnickoime=$_POST['username'];
+           $sifra=$_POST['password'];
+           $flag=0;
+		   foreach ($korisnik as $korisnici) {
+			  echo "$korisnik";
+			  echo "$korisnickoime";
+			  echo "$sifra";
+	}  }
+	else { echo "Pickoo pegava";}
+  ?>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="POST" action="<?php $_SERVER['PHP_SELF']?>">
+					<span class="login100-form-title">
+						Prijavite se
+						
+					</span>
 
-	</head>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Molim Vas unesite korisnicko ime">
+						<input class="input100" type="text" name="username" id="username" placeholder="Korisnicko ime">
+						<span class="focus-input100"></span>
+					</div>
 
+					<div class="wrap-input100 validate-input" data-validate = "Molim Vas unesite password">
+						<input class="input100" type="password" name="pass" id="password" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
 
-	<body class="homepage">
-		
-		<div id="site-content">
-			<header class="site-header">
-				<div class="container">
-					<a href="index.php" id="branding" class="pull-left">
-						<i class="icon-cupcake logo"></i>
-						<h1 class="site-title">Name Surname</h1>
-					</a>
-					<!-- Default snippet for navigation -->
-					<div class="main-navigation pull-right">
-						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
-						<ul class="menu">
-							<li class="menu-item"><a href="about.php">About me</a></li>
-							<li class="menu-item"><a href="offer.php">My offer</a></li>
-							<li class="menu-item"><a href="recipe.php">Recipes</a></li>
-							<li class="menu-item"><a href="contact.php">Contact</a></li>
-						</ul> <!-- .menu -->
-					</div> <!-- .main-navigation -->
-
-					<div class="mobile-navigation"></div>
-				</div>
-			</header> <!-- .site-header -->
-
-			<div class="hero">
-				<div class="container">
-					<i class="icon-cupcake logo"></i>
-					<h1 class="site-title">Name Surname</h1>
-					<small class="site-description">Professional Dietician</small>
-				</div>
+					<div class="text-right p-t-13 p-b-23">
+						
+						
+					</div>
+                    <div class="text-right p-t-13 p-b-23">
+						
+						
+					</div>
+					<div class="text-right p-t-13 p-b-23">
+						
+						</a>
+					</div>
+					<div class="container-login100-form-btn">
+						<input class="login100-form-btn" type="submit" id="login" value="P R I J A V A ">
+						</input>
+					</div>
+             
+					
+						
+                     <div class="flex-col-c p-t-170 p-b-40">
+                        
+						<label> Nemate nalog? </label>
+						<a href="registracija.php" class="txt3">
+							Napravite nalog na FitMe
+						</a>
+					</div>
+				</form>
+				 
 			</div>
-
-			<main class="main-content">
-				<div class="fullwidth-block cooking-section category-block">
-					<div class="container">
-						<figure><img src="dummy/cooking.png" alt="cooking"></figure>
-						<div class="category-content">
-							<h1 class="category-title">Lorem ipsum dolor sit</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem aperiam ab, rem dignissimos ducimus soluta culpa veritatis consequuntur asperiores, ad cum, ipsum quidem harum error dolores quia eius quae.</p>
-							<a href="#" class="button">Read more</a>
-						</div> <!-- .category-content -->
-					</div>
-				</div> <!-- .cooking-section -->
-				<div class="fullwidth-block restaurant-section category-block">
-					<div class="container">
-						<figure><img src="dummy/restaurant.png" alt="restaurant"></figure>
-						<div class="category-content">
-							<h1 class="category-title">Duis aute reprehenderit</h1>
-							<p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.</p>
-							<a href="#" class="button">Read more</a>
-						</div> <!-- .category-content -->
-					</div>
-				</div> <!-- .restaurant-section -->
-				<div class="fullwidth-block fruits-section category-block">
-					<div class="container">
-						<figure><img src="dummy/fruits.png" alt="fruits"></figure>
-						<div class="category-content">
-							<h1 class="category-title">Nam libero tempore</h1>
-							<p>Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
-							<a href="#" class="button">Read more</a>
-						</div> <!-- .category-content -->
-					</div>
-				</div> <!-- .fruits-section -->
-				<div class="fullwidth-block vegetables-section category-block">
-					<div class="container">
-						<figure><img src="dummy/vegetables.png" alt="vegetables"></figure>
-						<div class="category-content">
-							<h1 class="category-title">Sint molestiae recusandae</h1>
-							<p>Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil.</p>
-							<a href="#" class="button">Read more</a>
-						</div> <!-- .category-content -->
-					</div>
-				</div> <!-- .vegetables-section -->
-
-			</main> <!-- .main-content -->
-			
-			<footer class="site-footer">
-				<div class="container">
-					<i class="icon-cupcake logo"></i>
-					<nav class="footer-navigation">
-						<a href="about.php">About me</a>
-						<a href="offer.php">My offer</a>
-						<a href="recipe.php">Recipes</a>
-						<a href="contact.php">Contact</a>
-					</nav>
-					<div class="subscribe">
-						<form action="#">
-							<input type="text" placeholder="Enter your email to join newsletter...">
-							<input type="submit" value="Subscribe">
-						</form>
-					</div>
-					<div class="social-links">
-						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-						<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
-					</div>
-					<div class="colophon">
-						<p>Copyright 2014 Company name. Designed by Themezy. All right reserved</p>
-					</div>
-				</div>
-			</footer>
-
 		</div>
+	</div>
+	
+	 
 
-		
-
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
-
-</php>
+</body>
+</html>

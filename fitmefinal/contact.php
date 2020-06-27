@@ -28,7 +28,7 @@
 				<div class="container">
 					<div id="branding" class="pull-left">
 						<i class="icon-cupcake logo"></i>
-						<h1 class="site-title"><a href="index.php">Name Surname</a></h1>
+						<h1 class="site-title"><a href="pocetna.php">Name Surname</a></h1>
 					</div>
 					<!-- Default snippet for navigation -->
 					<div class="main-navigation pull-right">
