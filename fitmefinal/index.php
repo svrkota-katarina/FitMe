@@ -35,19 +35,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body>
-	 <?php							if(isset($_POST["login"]))
-	{	
-           $korisnickoime=$_POST['username'];
-           $sifra=$_POST['password'];
-           $flag=0;
-		   foreach ($korisnik as $korisnici) {
-			  echo "$korisnik";
-			  echo "$korisnickoime";
-			  echo "$sifra";
-	}  }
-	else { echo "Pickoo pegava";}
-  ?>
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
