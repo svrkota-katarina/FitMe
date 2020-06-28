@@ -64,6 +64,8 @@
 									<li><span class="icon"><img src="images/icon-heart.png"></span>Favourites: <strong>Lorem ipsum, Dolor sit</strong></li>
 									<li><span class="icon"><img src="images/icon-clock.png"></span>Experience: <strong>6 years</strong></li>
 								</ul>
+								</br>
+								<button><a href="spisak.php">Spisak za kupovinu</button>
 							</div>
 						</div>
 					</div>
