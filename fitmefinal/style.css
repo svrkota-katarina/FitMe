@@ -616,4 +616,54 @@ p { margin-top: 0; }
 .site-footer .social-links .pinterest:hover { background-color: #e33f4d; }
 .site-footer .colophon { font-size: 14px; font-size: 0.875rem; }
 
+.logoF{
+    height: 5em;
+    width: 8em;
+}
+.recSlik{
+    height: 27em;
+    width: 27em;
+}
+.pretraga{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:auto;
+  padding-top: 3em;
+  padding-bottom: 0;
+  position: relative;
+  bottom: -13px;
+  left: -100px;
+  width: 40%;
+}
+.meni{
+   position: relative;
+   top:-60px;
+}
+.jelovnik{
+    
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+   text-align: center; 
+   margin: 0px; 
+   display: inline-block; 
+   padding-top: 0px;
+}
+.pad{
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    display: inline-block; 
+    padding-top: 0px;
+    border-style: solid;
+    border-color: #2c6e3e;
+    border-width: 5px;
+}
+.ikonice{
+    width: 35px;
+    height: 30px;
+}
 /*# sourceMappingURL=style.css.map */
