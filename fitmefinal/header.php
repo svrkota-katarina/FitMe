@@ -4,7 +4,7 @@
 						<img src="slike/logoClearBg.png" class="responsive logoF">
 					</a>
                                     <div class="subscribe pretraga">
-                                        <form action="recipe.php" method="post">
+                                        <form action="recepti.php" method="post">
 							<input type="text" name='pretraga' placeholder="Pretrazi...">
 							<input type="submit" value="Pretrazi">
 						</form>

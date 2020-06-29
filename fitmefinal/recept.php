@@ -17,11 +17,22 @@
 		<script src="js/ie-support/php5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
-
+<script>
+     function voli($srce,$id){
+         $slika=$srce.getAttribute("src");
+         document.cookie = "voli="+$id;
+         if($slika=="slike/csrce"){
+              $srce.setAttribute("src","slike/srce");
+         }
+         else
+         $srce.setAttribute("src","slike/csrce");
+     }
+ </script>
 	</head>
 <?php  
+include "provera.php";
 session_start();
-    $idRec=$_SESSION['idR'];
+    $idRec=$_GET['id'];
     $kon= mysqli_connect("localhost", "root", "", "fitme", "3308") or die("Konekcija sa bazom nije uspela");
     $upit="SELECT * FROM recept WHERE idR='$idRec'";
     $rez= mysqli_query($kon, $upit) or die("Upit neuspesno izvrsen");
@@ -33,6 +44,7 @@ session_start();
     $sastojci= mysqli_fetch_all($rez, MYSQLI_ASSOC);
     
 ?>
+        
 
 	<body>
 		
@@ -53,7 +65,16 @@ session_start();
 									<span class="time"><img src="images/icon-time.png"> <?php echo $recept['vreme']." min" ?></span>
 									<span class="calorie"><img src="images/icon-pie-chart.png"> <?php echo $recept['kcal']." kcal" ?></span>
 									<span class="comment"><img src="images/icon-comment.png"> 2 komentara</span>
-								</div>
+                                                                        <?php
+                                                                        $up="SELECT * FROM voli WHERE idR={$recept['idR']}";
+                                                                        $res= mysqli_query($kon, $up) or die("Upit neuspesno izvrsen");
+                                                                        $res= mysqli_fetch_array($res);
+                                                                        if($res==null) 
+                                                                           echo "<a href='recept.php?id={$recept['idR']}'><img src='slike/srce.png' class='sr' onclick='voli(this,{$recept['idR']})'></a>";
+                                                                        else 
+                                                                            echo "<a href='recept.php?id={$recept['idR']}'><img src='slike/csrce.png' class='sr' onclick='voli(this,{$recept['idR']})'></a>";
+								?>
+                                                                </div>
 								<div class="ingredient">
 									<h3>Sastojci</h3>
 									<table>

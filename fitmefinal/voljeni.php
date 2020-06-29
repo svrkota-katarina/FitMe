@@ -27,7 +27,7 @@
 			
                         <?php
                         include 'header.php';
-                        include 'pretraga.php';?>
+                        include 'moji.php';?>
 			<main class="main-content">
 				
 				<div class="content">

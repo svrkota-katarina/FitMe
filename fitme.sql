@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Jun 28, 2020 at 01:33 AM
+-- Generation Time: Jun 29, 2020 at 02:46 AM
 -- Server version: 5.7.28
 -- PHP Version: 7.3.12
 
@@ -21,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `fitme`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `korisnik`
+--
+
+DROP TABLE IF EXISTS `korisnik`;
+CREATE TABLE IF NOT EXISTS `korisnik` (
+  `username` varchar(15) NOT NULL,
+  `password` varchar(15) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `korisnik`
+--
+
+INSERT INTO `korisnik` (`username`, `password`) VALUES
+('kaca', 'sifra');
 
 -- --------------------------------------------------------
 
@@ -141,6 +160,30 @@ INSERT INTO `sast_u_red` (`idR`, `idS`, `idSR`, `kol`, `jed`) VALUES
 (4, 30, 23, 1, 'kasicica'),
 (4, 17, 24, NULL, 'prstohvat'),
 (4, 31, 25, NULL, 'prstohvat');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `voli`
+--
+
+DROP TABLE IF EXISTS `voli`;
+CREATE TABLE IF NOT EXISTS `voli` (
+  `idR` int(11) DEFAULT NULL,
+  `username` varchar(15) DEFAULT NULL,
+  `idV` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idV`),
+  KEY `idR` (`idR`),
+  KEY `username` (`username`)
+) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `voli`
+--
+
+INSERT INTO `voli` (`idR`, `username`, `idV`) VALUES
+(1, 'kaca', 27),
+(4, 'kaca', 24);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
