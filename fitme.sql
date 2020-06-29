@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Jun 29, 2020 at 02:46 AM
+-- Generation Time: Jun 29, 2020 at 03:06 AM
 -- Server version: 5.7.28
 -- PHP Version: 7.3.12
 
@@ -30,16 +30,18 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `korisnik`;
 CREATE TABLE IF NOT EXISTS `korisnik` (
+  `idK` int(11) NOT NULL,
   `username` varchar(15) NOT NULL,
-  `password` varchar(15) NOT NULL
+  `password` varchar(15) NOT NULL,
+  PRIMARY KEY (`idK`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `korisnik`
 --
 
-INSERT INTO `korisnik` (`username`, `password`) VALUES
-('kaca', 'sifra');
+INSERT INTO `korisnik` (`idK`, `username`, `password`) VALUES
+(1, 'kaca', 'sifra');
 
 -- --------------------------------------------------------
 
