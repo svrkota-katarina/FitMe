@@ -9,17 +9,19 @@ if(empty($user))
 	 $poruka.="Korisnicko ime nije uneto!<br/>";
  if(empty($pass))
 	 $poruka.="Lozinka nije uneta!<br/>";
- if($poruka!=" ")
+ if($poruka!="")
  {	 
  $_SESSION['poruka']=$poruka;
  header("Location:index.php"); 
  exit();
  }
-
-$conn=mysqli_connect("localhost","root","","fitme")
+ echo "ULOGOVAN";
+echo $user;
+echo $pass;
+$conn=mysqli_connect("localhost","root","","fitme","3308")
 or die("Konekcija nije uspela!!!");
 
-$upit="SELECT * FROM korisnik WHERE userkor='$user'";
+$upit="SELECT * FROM korisnik WHERE username='$user'";
 
 $result= mysqli_query($conn, $upit)
         or die ("Neuspesno izvrsavanje upita!");
@@ -31,9 +33,9 @@ if(mysqli_num_rows($result)!=1){
 }
 
  $user_db=mysqli_fetch_array($result);
- if($user_db['pass']==$pass) {
+ if($user_db['password']==$pass) {
 	 $_SESSION['user']=$user;
-	 header("Location::pocetna.php");
+	 header("Location:pocetna.php");
 	 exit();
  }
 else {
