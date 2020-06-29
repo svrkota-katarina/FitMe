@@ -1,6 +1,6 @@
 <header class="site-header">
 				<div class="container">
-					<a href="index.php" id="branding" class="pull-left">
+					<a href="profil.php" id="branding" class="pull-left">
 						<img src="slike/logoClearBg.png" class="responsive logoF">
 					</a>
                                     <div class="subscribe pretraga">
