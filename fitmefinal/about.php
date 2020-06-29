@@ -11,7 +11,7 @@
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="fonts/iconmoon.css" rel="stylesheet" type="text/css">
 		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style2.css">
 		
 		<!--[if lt IE 9]>
 		<script src="js/ie-support/php5.js"></script>
@@ -24,20 +24,20 @@
 	<body>
 		
 		<div id="site-content">
+		
 			<header class="site-header">
 				<div class="container">
-					<a href="pocetna.php" id="branding" class="pull-left">
-						<i class="icon-cupcake logo"></i>
-						<h1 class="site-title">Name Surname</h1>
+					<a href="profil.php" id="branding" class="pull-left">
+						<img src="slike/logoClearBg.png" class="responsive logoF">
 					</a>
+                                    
 					<!-- Default snippet for navigation -->
 					<div class="main-navigation pull-right">
 						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item current-menu-item"><a href="about.php">About me</a></li>
-							<li class="menu-item"><a href="offer.php">My offer</a></li>
-							<li class="menu-item"><a href="recipe.php">Recipes</a></li>
-							<li class="menu-item"><a href="contact.php">Contact</a></li>
+							<li class="menu-item"><a href="profil.php">Profil</a></li>
+							<li class="menu-item"><a href="contact.php">Kontaktirajte nas</a></li>
+							<li class="menu-item"><a href="about.php">Vasi podaci</a></li>
 						</ul> <!-- .menu -->
 					</div> <!-- .main-navigation -->
 
@@ -52,20 +52,20 @@
 						<div class="row">
 							<div class="col-md-5">
 								<figure class="profile-picture">
-									<img src="dummy/person.jpg" alt="">
+									<img src="slike/slikakorisnik.jpg" alt="">
 								</figure>
 							</div>
 							<div class="col-md-6 col-md-offset-1">
-								<h2>Hello, <br> I am Name Surname</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+								<h2>Dobro dosli korisnice <br> kaca</h2>
+								<p>Na ovoj strani mozete videti Vase korisnicke podatke,kao i izmeniti pojedine stavke klikom na dugme izmena podataka </p>
 								<ul class="person-detail">
-									<li><span class="icon"><img src="images/icon-baby.png"></span>Born: <strong>08.05.1985</strong></li>
-									<li><span class="icon"><img src="images/icon-map-marker.png"></span>City: <strong>New York</strong></li>
-									<li><span class="icon"><img src="images/icon-heart.png"></span>Favourites: <strong>Lorem ipsum, Dolor sit</strong></li>
-									<li><span class="icon"><img src="images/icon-clock.png"></span>Experience: <strong>6 years</strong></li>
+									<li><span class="icon"><img src="images/icon-baby.png"></span>Datum rodjenja: <strong>08.05.1985</strong></li>
+									<li><span class="icon"><img src="images/icon-map-marker.png"></span>Grad: <strong>Beograd,Srbija</strong></li>
+									<li><span class="icon"><img src="images/icon-heart.png"></span>Omiljena jela: <strong>Ovsena kasa, Paradajz corba</strong></li>
+									<li><span class="icon"><img src="images/icon-clock.png"></span>Korisnik na FitMe: <strong>6 godina 3 meseca</strong></li>
 								</ul>
 								</br>
-								<button><a href="spisak.php">Spisak za kupovinu</button>
+								<button><a href="#">Izmena podataka</button>
 							</div>
 						</div>
 					</div>
@@ -73,32 +73,9 @@
 
 			</main> <!-- .main-content -->
 			
-			<footer class="site-footer">
-				<div class="container">
-					<i class="icon-cupcake logo"></i>
-					<nav class="footer-navigation">
-						<a href="about.php">About me</a>
-						<a href="offer.php">My offer</a>
-						<a href="recipe.php">Recipes</a>
-						<a href="contact.php">Contact</a>
-					</nav>
-					<div class="subscribe">
-						<form action="#">
-							<input type="text" placeholder="Enter your email to join newsletter...">
-							<input type="submit" value="Subscribe">
-						</form>
-					</div>
-					<div class="social-links">
-						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-						<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
-					</div>
-					<div class="colophon">
-						<p>Copyright 2014 Company name. Designed by Themezy. All right reserved</p>
-					</div>
-				</div>
-			</footer>
+			<?php include 'footer.php'; ?>
+
+        </div>
 
 		</div>
 

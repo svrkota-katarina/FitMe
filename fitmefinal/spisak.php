@@ -73,9 +73,11 @@
           <button class="btn delete" data-delete-list-button>Izbrisi ceo spisak</button>
 		  
         </div>
+		
       </div>
+	  
     </div>
-
+<button class="dugmestil"><a href="profil.php">Povratak na stranu profila</button>
    
     </div>
     <template id="task-template">
@@ -87,7 +89,7 @@
       </div>
     </template>
 	
-	<button class= "dugmestil"><a href="about.php">Povratak na stranu profila</button>
+	
 	
   </body>
 </html>

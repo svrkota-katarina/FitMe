@@ -18,7 +18,7 @@ if(empty($user))
  echo "ULOGOVAN";
 echo $user;
 echo $pass;
-$conn=mysqli_connect("localhost","root","","fitme","3308")
+$conn=mysqli_connect("localhost","root","","fitme","3306")
 or die("Konekcija nije uspela!!!");
 
 $upit="SELECT * FROM korisnik WHERE username='$user'";
@@ -35,7 +35,7 @@ if(mysqli_num_rows($result)!=1){
  $user_db=mysqli_fetch_array($result);
  if($user_db['password']==$pass) {
 	 $_SESSION['user']=$user;
-	 header("Location:pocetna.php");
+	 header("Location:profil.php");
 	 exit();
  }
 else {
