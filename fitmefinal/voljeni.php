@@ -41,7 +41,7 @@
                                                         $rez= mysqli_query($kon, $upit);
                                                         $recept= mysqli_fetch_assoc($rez);
 							echo "<article class='recipe'>";
-							echo	"<figure class='recipe-image'><img src='slike/{$recept['slika']}' alt='Food 1'></figure>";
+							echo	"<figure class='recipe-image'><img src='slike/{$recept['slika']}.png' alt='Food 1'></figure>";
 							echo	"<div class='recipe-detail'>";
                                                         echo		"<h2 class='recipe-title'><a href='recept.php?id={$recept["idR"]}'>{$recept['naslov']}</a></h2>";
                                                         $tekst= substr($recept['priprema'], 0, 300);
