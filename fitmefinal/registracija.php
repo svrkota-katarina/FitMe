@@ -45,6 +45,25 @@
                                 </div>
                             </div>
                         </div>
+						
+                                <div class="input-group">
+                                    <label class="label">Korisnicko ime</label>
+                                    <input class="input--style-4" type="email" name="email">
+                                </div>
+								 <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Lozinka</label>
+                                    <input class="input--style-4" type="text" name="first_name">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Potvrda lozinke</label>
+                                    <input class="input--style-4" type="text" name="last_name">
+                                </div>
+                            </div>
+                        </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
