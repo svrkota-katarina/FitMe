@@ -61,7 +61,7 @@
 								<ul class="person-detail">
 									<li><span class="icon"><img src="images/icon-baby.png"></span>Datum rodjenja: <strong>08.05.1985</strong></li>
 									<li><span class="icon"><img src="images/icon-map-marker.png"></span>Grad: <strong>Beograd,Srbija</strong></li>
-									<li><span class="icon"><img src="images/icon-heart.png"></span>Omiljena jela: <strong>Ovsena kasa, Paradajz corba</strong></li>
+                                                                        <li><a href="voljeni.php"><span class="icon"><img src="images/icon-heart.png"></span> Omiljena jela </a></li>
 									<li><span class="icon"><img src="images/icon-clock.png"></span>Korisnik na FitMe: <strong>6 godina 3 meseca</strong></li>
 								</ul>
 								</br>
