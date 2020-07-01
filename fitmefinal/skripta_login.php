@@ -15,9 +15,7 @@ if(empty($user))
  header("Location:index.php"); 
  exit();
  }
- echo "ULOGOVAN";
-echo $user;
-echo $pass;
+ 
 $conn=mysqli_connect("localhost","root","","fitme","3306")
 or die("Konekcija nije uspela!!!");
 
